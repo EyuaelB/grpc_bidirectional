@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service ChatService
+{
+    rpc chat (stream ClientTxt) returns (stream ServerTxt) {}
+ }
+
+message ClientTxt {
+string client_txt =1;
+ }
+
+ message ServerTxt{
+string server_txt =1;
+ }
